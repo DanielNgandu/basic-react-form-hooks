@@ -73,7 +73,7 @@ export default function App() {
                     name="firstName"
                 />
                 {/*conditional logic*/}
-                {submitted && valid ? <span id="first-name-error">Please enter a first name</span>
+                {!submitted && !valid ? <span id="first-name-error">Please enter a first name</span>
                     : ''}
 
                 <input
@@ -86,7 +86,7 @@ export default function App() {
                     name="lastName"
                 />
                 {/*conditional logic*/}
-                {submitted && valid? <span id="last-name-error">Please enter a last name</span>
+                {!submitted && !valid? <span id="last-name-error">Please enter a last name</span>
                     : ''} <input
                 id="email"
                 className="form-field"
@@ -98,7 +98,7 @@ export default function App() {
                 name="email"
             />
                 {/*conditional logic*/}
-                {submitted && valid ? <span id="email-error">Please enter an email</span>
+                {!submitted && !valid ? <span id="email-error">Please enter an email</span>
                     : ''}
                 <button className="form-field" type="submit">
                     Register
